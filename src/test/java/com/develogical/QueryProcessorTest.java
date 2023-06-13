@@ -20,4 +20,9 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("Shakespeare"), containsString("playwright"));
     }
 
+     @Test
+    public void largestNumber () throws Exception {
+        assertThat(queryProcessor.process("Which of the following numbers is the largest: 30, 1, 70?"), containsString("70"));
+    }
+
 }

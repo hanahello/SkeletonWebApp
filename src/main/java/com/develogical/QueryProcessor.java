@@ -19,14 +19,14 @@ public class QueryProcessor {
             return "Hammy";
         }
 
-      if(query.toLowerCase().contains("largest number find")) {
+      if(query.toLowerCase().contains("largest")) {
             String noQuestionMark = query.replace("?", "");
             String []parts = noQuestionMark.split(":");
             String []numbers = parts[1].split(",");
 
-            int first = Integer.parseInt(numbers[0]);
-            int second = Integer.parseInt(numbers[1]);
-            int third = Integer.parseInt(numbers[2]);
+            int first = Integer.parseInt(numbers[0].trim());
+            int second = Integer.parseInt(numbers[1].trim());
+            int third = Integer.parseInt(numbers[2].trim());
 
             if(first > second){
                 if(first > third){
@@ -40,6 +40,6 @@ public class QueryProcessor {
                             return String.valueOf(third);
                     }  
                 }
-    return query;}
+    return "";}
     
             }
