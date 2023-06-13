@@ -15,6 +15,10 @@ public class QueryProcessor {
                     "writer in the English language and the world's pre-eminent dramatist.";
         }
 
+        if (query.toLowerCase().contains("your name")) {
+            return "Hammy";
+        }
+
         else if(query.toLowerCase().contains("largest number find")) {
             String noQuestionMark = query.replace("?", "");
             String []parts = noQuestionMark.split(":");
@@ -35,7 +39,7 @@ public class QueryProcessor {
                     else{
                         return String.valueOf(third);
                     }  
-                       
+
 
                     
                     
