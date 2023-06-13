@@ -19,7 +19,7 @@ public class QueryProcessor {
             return "Hammy";
         }
 
-        else if(query.toLowerCase().contains("largest number find")) {
+      if(query.toLowerCase().contains("largest number find")) {
             String noQuestionMark = query.replace("?", "");
             String []parts = noQuestionMark.split(":");
             String []numbers = parts[1].split(",");
@@ -33,32 +33,13 @@ public class QueryProcessor {
                     return String.valueOf(first);}
                         else {
                             return String.valueOf(third);
-                      }
-                if(second > third){
-                    return String.valueOf(second) ;}
-                    else{
-                        return String.valueOf(third);
+                        }
+                    }  else if(second > third){
+                            return String.valueOf(second) ;}
+                        else{
+                            return String.valueOf(third);
                     }  
-
-
-                    
-                    
-                        
-                    }
                 }
-            }
-        }
-
-         if (query.toLowerCase().contains("your name")) {
-            return "hammy";
-        }
-
-        else if (query.toLowerCase().contains("plus")){
-            String noQuestionMark = query.replace(, query)
-        }
-
-
-        return "";
-    }
+    return query;}
     
-}
+            }
