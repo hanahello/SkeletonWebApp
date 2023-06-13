@@ -15,9 +15,44 @@ public class QueryProcessor {
                     "writer in the English language and the world's pre-eminent dramatist.";
         }
 
+        else if(query.toLowerCase().contains("largest number find")) {
+            String noQuestionMark = query.replace("?", "");
+            String []parts = noQuestionMark.split(":");
+            String []numbers = parts[1].split(",");
+
+            int first = Integer.parseInt(numbers[0]);
+            int second = Integer.parseInt(numbers[1]);
+            int third = Integer.parseInt(numbers[2]);
+
+            if(first > second){
+                if(first > third){
+                    return String.valueOf(first);}
+                        else {
+                            return String.valueOf(third);
+                      }
+                if(second > third){
+                    return String.valueOf(second) ;}
+                    else{
+                        return String.valueOf(third);
+                    }  
+                       
+
+                    
+                    
+                        
+                    }
+                }
+            }
+        }
+
          if (query.toLowerCase().contains("your name")) {
             return "hammy";
         }
+
+        else if (query.toLowerCase().contains("plus")){
+            String noQuestionMark = query.replace(, query)
+        }
+
 
         return "";
     }
